@@ -17,5 +17,6 @@ class Transaction extends Model
     protected $fillable = [
         'details',
         'is_online',
+        'user_id'
     ];
 }

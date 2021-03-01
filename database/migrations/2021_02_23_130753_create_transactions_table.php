@@ -17,7 +17,9 @@ class CreateTransactionsTable extends Migration
             $table->id();
             $table->string('details', 100)->nullable();
             $table->boolean('is_online')->default(true);
+            $table->unsignedBigInteger('user_id');
             $table->timestamps();
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

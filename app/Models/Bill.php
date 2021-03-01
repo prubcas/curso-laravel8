@@ -17,5 +17,17 @@ class Bill extends Model
     protected $fillable = [
         'description',
         'amount',
+        'generated_at',
+        'transaction_id',
+        // 'stock',
+    ];
+
+    /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'generated_at' => 'datetime',
     ];
 }

@@ -24,6 +24,7 @@ class BillFactory extends Factory
         return [
             'description' => $this->faker->words(15, true),
             'amount' => $this->faker->numberBetween(150, 1500),
+            'generated_at' => now()->minusDays(2),
         ];
     }
 }

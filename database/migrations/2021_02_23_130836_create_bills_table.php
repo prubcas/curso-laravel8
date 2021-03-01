@@ -17,7 +17,12 @@ class CreateBillsTable extends Migration
             $table->id();
             $table->string('description', 500);
             $table->integer('amount')->unsigned();
+            $table->timestamp('generated_at');
+            $table->unsignedBigInteger('transaction_id');
             $table->timestamps();
+            $table->foreign('transaction_id')->references('id')->on('transactions');
+
+            // $table->foreignId('transaction_id');
         });
     }
 
