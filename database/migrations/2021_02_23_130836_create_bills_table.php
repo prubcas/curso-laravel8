@@ -21,8 +21,6 @@ class CreateBillsTable extends Migration
             $table->unsignedBigInteger('transaction_id');
             $table->timestamps();
             $table->foreign('transaction_id')->references('id')->on('transactions');
-
-            // $table->foreignId('transaction_id');
         });
     }
 

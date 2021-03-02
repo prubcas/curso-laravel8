@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Bill;
+use App\Models\Transaction;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class BillFactory extends Factory
@@ -24,7 +25,8 @@ class BillFactory extends Factory
         return [
             'description' => $this->faker->words(15, true),
             'amount' => $this->faker->numberBetween(150, 1500),
-            'generated_at' => now()->minusDays(2),
+            'generated_at' => now()->subDays(2),
+            // 'transaction_id' => Transaction::factory()->create(),
         ];
     }
 }
