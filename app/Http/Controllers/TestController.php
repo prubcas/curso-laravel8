@@ -9,6 +9,6 @@ class TestController extends Controller
 {
     public function test()
     {
-        return User::findOrFail(50);
+        return User::findOrFail(1);
     }
 }
