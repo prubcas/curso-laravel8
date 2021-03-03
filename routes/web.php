@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\SaludoController;
+use App\Http\Controllers\TestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,12 +18,5 @@ Route::get('/', function () {
     return view('welcome');
 })->name('main');
 
-Route::get(
-    '/saludar/{name?}/',
-    [
-        SaludoController::class,
-        'saludar'
-    ]
-)->where(['name' => '[a-zA-Z]+'])
-->name('saludar');
+Route::get('test', [TestController::class, 'test'])->name('test');
 
