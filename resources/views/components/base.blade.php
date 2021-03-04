@@ -9,6 +9,7 @@
 <body>
     <x-navbar></x-navbar>
     <x-success></x-success>
+    <x-errors></x-errors>
     <img src="#" alt="Text">
     {{ $slot }}
 

@@ -22,13 +22,7 @@
                         <td>
                             <a href="#">Mostrar</a>
                             <a href="#">Editar</a>
-                            <form
-                                action="{{ route('products.destroy', ['product' => $product]) }}"
-                                method="post">
-                                @csrf
-                                @method('delete')
-                                <input type="submit" value="Eliminar">
-                            </form>
+                            <a href="#">Eliminar</a>
                         </td>
                     </tr>
                 @endforeach
