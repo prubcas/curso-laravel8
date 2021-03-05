@@ -20,8 +20,8 @@
                         <td>{{ $product->title }}</td>
                         <td>{{ $product->price }}</td>
                         <td>
-                            <a href="#">Mostrar</a>
-                            <a href="#">Editar</a>
+                            <a href="{{ route('products.show', ['product' => $product->id]) }}">Mostrar</a>
+                            <a href="{{ route('products.edit', ['product' => $product->id]) }}">Editar</a>
                             <form
                                 action="{{ route('products.destroy', ['product' => $product]) }}"
                                 method="post">
